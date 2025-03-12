@@ -3,9 +3,25 @@
   "version": "1.0.0",
   "main": "entorno.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "electron": "electron ./herramientas/electron/index.js",
+    "start": "gulp --gulpfile ./herramientas/automatizacion/gulpfile.js",
+    "build": "gulp build --gulpfile ./herramientas/automatizacion/gulpfile.js",
+    "server": "gulp server --gulpfile ./herramientas/automatizacion/gulpfile.js"
   },
   "author": "Gibran Juarez Loyo",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "gulp-server-livereload": "^1.9.2",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "electron": "^35.0.1",
+    "gulp": "^5.0.0",
+    "moment": "^2.30.1",
+    "puppeteer": "^24.4.0",
+    "sharp": "^0.33.5"
+  }
 }
